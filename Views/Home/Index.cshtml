@@ -1,0 +1,40 @@
+﻿@Html.Partial("Cache")
+
+@{ ViewBag.js = SquishIt.Framework.Bundle.JavaScript(); ViewBag.css = SquishIt.Framework.Bundle.Css(); }
+@Html.Partial("BaseCss")
+@Html.Partial("BaseJs")
+
+<header>
+    @Html.Partial("~/Views/Header/Nav.cshtml")
+</header>
+
+<div id="container" class="container">
+    <div class="page" data-page="Index" data-url="#">
+        @Html.Partial("~/Views/Index/Unit.cshtml")
+        @Html.Partial("~/Views/Index/Article.cshtml")
+
+        @{ ViewBag.js.Add("~/Scripts/App/Controllers/IndexController.js"); }
+    </div>
+
+    <div class="page" data-page="About" data-url="#about">
+        @Html.Partial("~/Views/About/Unit.cshtml")
+        @Html.Partial("~/Views/About/Article.cshtml")
+
+        @{ ViewBag.js.Add("~/Scripts/App/Controllers/AboutController.js"); }
+    </div>
+
+    <div class="page" data-page="Contact" data-url="#contact">
+        @Html.Partial("~/Views/Contact/Unit.cshtml")
+        @Html.Partial("~/Views/Contact/Article.cshtml")
+
+        @{ ViewBag.js.Add("~/Scripts/App/Controllers/ContactController.js"); }
+    </div>
+</div>
+
+<footer>
+    @Html.Partial("~/Views/Footer/Rights.cshtml")
+</footer>
+
+@Html.Partial("Configuration")
+@{ ViewBag.js.Add("~/Scripts/App/Application.js"); }
+@Html.Partial("SquishItMinifier")

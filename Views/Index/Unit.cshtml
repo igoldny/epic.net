@@ -1,0 +1,13 @@
+﻿@{ ViewBag.css.Add("~/css/App/Index/Unit.less"); }
+
+<!-- Main hero unit for a primary marketing message or call to action -->
+<div id="Unit" class="hero-unit"></div>
+
+<script type="text/x-jquery-tmpl" id="UnitTemplate">
+    <h1>${ Title }</h1>
+    <p>${ Message }</p>
+    <p><a id="btnLearnMore" class="btn btn-primary btn-large">Learn more &raquo;</a></p>
+</script>
+
+@{ ViewBag.js.Add("~/Scripts/App/Models/UnitModel.js")
+             .Add("~/Scripts/App/Views/Index/UnitView.js"); }

@@ -1,0 +1,32 @@
+<!doctype html>  
+<!--[if lt IE 7 ]> <html class="no-js ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]>    <html class="no-js ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]>    <html class="no-js ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <title>Epic Bootstrap Test</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+   
+   <!-- Test Assets -->
+    <link rel="stylesheet" href="@Url.Content("~/css/qunit/qunit.css")" media="screen">
+    <!-- Test Assets -->
+
+</head>
+<body>
+    <h1 id="qunit-header"></h1>
+	<h2 id="qunit-banner"></h2>
+	<div id="qunit-testrunner-toolbar"></div>
+	<h2 id="qunit-userAgent"></h2>
+	<ol id="qunit-tests"></ol>
+	<div id="qunit-fixture"></div>
+    
+    <div style="display: none;">
+        @RenderBody()
+    </div>
+
+    @Html.Raw(ViewBag.js.ForceRelease().Render("~/Scripts/combined_#.js"))
+</body>
+</html>

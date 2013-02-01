@@ -1,0 +1,11 @@
+﻿@{
+    ViewBag.css
+           .WithMinifier<SquishIt.Framework.Minifiers.CSS.YuiCompressor>()
+           .ForceRelease()
+           .AsCached("cssCache", "~/css/app.css");
+
+    ViewBag.js
+           .WithMinifier<SquishIt.Framework.Minifiers.JavaScript.NullMinifier>()
+           .ForceRelease()
+           .AsCached("jsCache", "~/Scripts/app.js");   
+}

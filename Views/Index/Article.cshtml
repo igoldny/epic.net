@@ -1,0 +1,16 @@
+﻿@{ ViewBag.css.Add("~/css/App/Index/Article.less"); }
+
+<!-- Example row of columns -->
+<div id="Article" class="row"></div>
+
+<script type="text/x-jquery-tmpl" id="ArticleTemplate">
+    <div class="span4">
+        <h2>${ Head }</h2>
+        <p>${ Description }</p>
+        <p><a class="btn btnViewDetails" href="#">View details &raquo;</a></p>
+    </div>
+</script>
+
+@{ ViewBag.js.Add("~/Scripts/App/Models/ArticleModel.js")
+             .Add("~/Scripts/App/Collections/ArticleCollection.js")
+             .Add("~/Scripts/App/Views/Index/ArticleView.js"); }

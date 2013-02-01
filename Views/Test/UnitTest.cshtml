@@ -1,0 +1,13 @@
+﻿@{ Layout = "~/Views/Shared/_TestLayout.cshtml"; ViewBag.js = SquishIt.Framework.Bundle.JavaScript(); ViewBag.css = SquishIt.Framework.Bundle.Css(); }
+
+@Html.Partial("TestCss")
+@Html.Partial("TestJs")
+
+@Html.Partial("BaseCss")
+@Html.Partial("BaseJs")
+
+@Html.Partial("~/Views/Index/Unit.cshtml")
+
+@{ ViewBag.js.Add("~/Scripts/app/Tests/Index/UnitTest.js"); }
+
+@Html.Partial("Configuration")
